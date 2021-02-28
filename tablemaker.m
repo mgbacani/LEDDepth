@@ -1,12 +1,13 @@
- 
-
+%stuff to fill in 
 files = ["Michaela_BrightCovertBB_012621.csv", "7cm.csv", "14cm.csv"];
 titles = ["file1new", "file2", "file3"];
 plotcolors = ['r', 'b', 'c'];
+middlearr=[2,3,3];
+plotTitle = 'meow';
+exportFileTitle = 'quack.xlsx';
+
 placeholder = {};
 placeholder{1} = {"trial", "pos.slope", "pos.slopeErr", "neg.slope", "neg.slopeErr", "pos.intercept", "pos.interceptErr", "neg.intercept", "neg.interceptErr", "pos.chi2Val", "pos.redChiSquare", "neg.chi2Val", "neg.redChiSquare", "rpos", "rneg"};
-middlearr=[2,3,3];
-moreevilplaceholder = {};
 
 for q = 1:length(files)
     trial = titles(q);
@@ -104,13 +105,13 @@ for q = 1:length(files)
 
 end
 recycle on
-delete('rip.xlsx');
-writecell(placeholder{1},'rip.xlsx');
+delete(exportFileTitle);
+writecell(placeholder{1},exportFileTitle);
 
 for i = 2:length(placeholder)
-    writematrix(placeholder{i},'rip.xlsx', 'WriteMode','append');
+    writematrix(placeholder{i},exportFileTitle, 'WriteMode','append');
 end
 
 xlabel('Distance (cm)');
 ylabel('Reaction Time (ms)');
-title('Depth vs. Reaction Time');
+title(plotTitle);
