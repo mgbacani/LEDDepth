@@ -1,4 +1,8 @@
-%stuff to fill in 
+%fill in file names and stuff below
+%parameters will be exported to an excel file
+%graph will need to be manually saved
+%this code does both, just run it and save what you need and delete what
+%you don't
 
 %names/paths of files
 files = ["Michaela_BrightCovertBB_012621.csv", "7cm.csv", "14cm.csv"];
@@ -123,9 +127,10 @@ for i = 2:length(placeholder)
     writematrix(placeholder{i},exportFileTitle, 'WriteMode','append');
 end
 
-xlim([0 300])
+xlim([0 270])
 ylim([0 900])
 xlabel('Distance (cm)');
+xticks([30, 60, 90, 120, 160, 200, 250])
 ylabel('Reaction Time (ms)');
 title(plotTitle);
 legend
