@@ -99,6 +99,9 @@ for q = 1:length(files)
     hold on
     errorbar(angles, meanarr, sdarr,'o' , 'color' , plotcolors(q), 'CapSize', 0, 'HandleVisibility',...
     'off');
+    plot(angles(1:middle), polyval(negparams,angles(1:middle)), 'color', plotcolors(q));
+    plot(angles(middle:end), polyval(posparams,angles(middle:end)), 'color', plotcolors(q));
+
 end
 recycle on
 delete('rip.xlsx');
