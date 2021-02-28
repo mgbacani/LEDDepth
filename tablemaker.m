@@ -1,11 +1,21 @@
 %stuff to fill in 
+
+%names/paths of files
 files = ["Michaela_BrightCovertBB_012621.csv", "7cm.csv", "14cm.csv"];
+%titles of trials (ex Arnav Sunset Data) - will appear in exported excel
+%file
 titles = ["file1new", "file2", "file3"];
-plotcolors = ['r', 'b', 'c'];
+%led you looked at when taking data (use 2 for 60cm and 3 for 90cm)
 middlearr=[2,3,3];
+%colors for each trial in plot
+plotcolors = ['r', 'b', 'c'];
+%title of plot
 plotTitle = 'meow';
+%title of exported excel parameter file
 exportFileTitle = 'quack.xlsx';
+%plot legend labels
 labels = {'thing thats supposed to have a middle at 0.9', 'other thing', 'other other thing'};
+% end stuff to fill in
 
 placeholder = {};
 placeholder{1} = {"trial", "pos.slope", "pos.slopeErr", "neg.slope", "neg.slopeErr", "pos.intercept", "pos.interceptErr", "neg.intercept", "neg.interceptErr", "pos.chi2Val", "pos.redChiSquare", "neg.chi2Val", "neg.redChiSquare", "rpos", "rneg"};
