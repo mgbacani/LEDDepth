@@ -111,3 +111,6 @@ for i = 2:length(placeholder)
     writematrix(placeholder{i},'rip.xlsx', 'WriteMode','append');
 end
 
+xlabel('Distance (cm)');
+ylabel('Reaction Time (ms)');
+title('Depth vs. Reaction Time');
