@@ -5,6 +5,7 @@ plotcolors = ['r', 'b', 'c'];
 middlearr=[2,3,3];
 plotTitle = 'meow';
 exportFileTitle = 'quack.xlsx';
+labels = {'thing thats supposed to have a middle at 0.9', 'other thing', 'other other thing'};
 
 placeholder = {};
 placeholder{1} = {"trial", "pos.slope", "pos.slopeErr", "neg.slope", "neg.slopeErr", "pos.intercept", "pos.interceptErr", "neg.intercept", "neg.interceptErr", "pos.chi2Val", "pos.redChiSquare", "neg.chi2Val", "neg.redChiSquare", "rpos", "rneg"};
@@ -100,8 +101,8 @@ for q = 1:length(files)
     hold on
     errorbar(angles, meanarr, sdarr,'o' , 'color' , plotcolors(q), 'CapSize', 0, 'HandleVisibility',...
     'off');
-    plot(angles(1:middle), polyval(negparams,angles(1:middle)), 'color', plotcolors(q));
-    plot(angles(middle:end), polyval(posparams,angles(middle:end)), 'color', plotcolors(q));
+    plot(angles(1:middle), polyval(negparams,angles(1:middle)), 'color', plotcolors(q),'HandleVisibility', 'off');
+    plot(angles(middle:end), polyval(posparams,angles(middle:end)), 'color', plotcolors(q), 'DisplayName',labels{q});
 
 end
 recycle on
@@ -112,6 +113,9 @@ for i = 2:length(placeholder)
     writematrix(placeholder{i},exportFileTitle, 'WriteMode','append');
 end
 
+xlim([0 300])
+ylim([0 900])
 xlabel('Distance (cm)');
 ylabel('Reaction Time (ms)');
 title(plotTitle);
+legend
