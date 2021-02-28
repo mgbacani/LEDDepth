@@ -5,7 +5,7 @@
 %you don't
 
 %names/paths of files
-files = ["Room Brightness/Aggregate Room Brightness (N=7 as of 210217).csv", "7cm.csv", "14cm.csv"];
+files = ["Michaela_BrightCovertBB_012621.csv", "7cm.csv", "14cm.csv"];
 %titles of trials (ex Arnav Sunset Data) - will appear in exported excel
 %file
 titles = ["file1new", "file2", "file3"];
