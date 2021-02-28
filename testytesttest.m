@@ -95,7 +95,7 @@ for q = 1:length(files)
 
 end
 recycle on
-delete('rip.xslx');
+delete('rip.xlsx');
 writecell(placeholder{1},'rip.xlsx');
 
 for i = 2:length(placeholder)
