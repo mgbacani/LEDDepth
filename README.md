@@ -3,7 +3,7 @@
 *use OldVersion.m
 
 ## Input Parameters
-files = ["Michaela_BrightCovertBB_012621.csv", "7cm.csv", "14cm.csv"];
+files = ["Michaela_BrightCovertBB_012621.csv", "7cm.csv", "14cm.csv"]; \n
 input array of any length with names of files you want analyzed
 
 titles = ["file1new", "file2", "file3"];
